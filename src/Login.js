@@ -8,7 +8,8 @@ import {actionTypes} from './reducer'
 
 function Login() {
   const [{}, dispatch] = useStateValue();
-  const signIn = () => {;
+
+  const signIn = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
@@ -21,6 +22,7 @@ function Login() {
   };
   return (
     <div class="login">
+      <div class="login__circle"></div>
       <div class="login__container">
         <img
           src="https://cdn.discordapp.com/attachments/782316820862074920/782327760529260604/bc3.jpg"
@@ -30,10 +32,12 @@ function Login() {
           <h1>BOYS & CO CHAT</h1>
         </div>
 
-        <Button onClick={signIn}>Sign in with Google</Button>
+        <Button onClick={signIn}>Sign in</Button>
       </div>
     </div>
   );
 }
 
 export default Login;
+
+  

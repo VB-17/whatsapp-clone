@@ -4,6 +4,7 @@
 
 .chat {
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     background-color: gray;
 }
@@ -44,6 +45,7 @@
     padding: 30px;
     overflow-y: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 

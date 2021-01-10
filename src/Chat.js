@@ -20,14 +20,13 @@ function Chat() {
   const { roomId } = useParams();
   const [roomName, setRoomName] = useState("");
   const [messages, setMessages] = useState([]);
-  const [{ user }] = useStateValue();
+  const [{ user}] = useStateValue();
 
   useEffect(() => {
     if (roomId) {
       db.collection("Rooms")
         .doc(roomId)
         .onSnapshot((snapshot) => setRoomName(snapshot.data().name));
-
       db.collection("Rooms")
         .doc(roomId)
         .collection("messages")
